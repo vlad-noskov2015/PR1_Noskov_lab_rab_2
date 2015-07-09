@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>    
+ <title>треугольник.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+  
+      <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"
+             type="text/javascript"></script>
+     <script type="text/javascript"> 
+        ymaps.ready(init);  
+        function init() { 
+            var myMap = new ymaps.Map('map', { 
+                center: [65.509389, -151.390021], 
+                zoom: 8         
+ }),            
+                 
+ myPolygon = new ymaps.Polygon([[
+                   
+			[65.587925,-150.374911],
+			[65.413461,-150.078287],
+			[65.413757,-150.567177],			
+                ]]);
+  
+            myMap.geoObjects.add(myPolygon)
+                 .add(myPolygon); 
+        }     </script> 
+</head>  
+<body> 
+
+<div id="map" style="width:600px;height:400px"></div> </body>  
+</html>  
+ 
